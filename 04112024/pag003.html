@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2></h2>
+
+    <input type="button" value="Aleterar o Titulo" onclick="alterarTitulo()">
+    <br><br>
+    <script>
+
+        var nome = window.prompt("Qual e o seu nome?", "Nome");
+        var titulo = "Parabens ao " +nome;
+        document.write("parabens ao " + nome);
+
+        function alterarTitulo(){
+            document.title = titulo;
+        }
+    </script>
+</body>
+</html>
