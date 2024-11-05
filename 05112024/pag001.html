@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function obrigado(){
+            window.alert("Obrigado pela visita")
+            window.open("http://www.wesleym");
+        }
+    </script>
+</head>
+<body>
+    <form>
+
+<label for="nome_id">Home: </label>
+<input type="text" name="nome" placeholder="Digite o seu nome">
+
+<br><br>
+
+<label for="cidade_id">Cidade: </label>
+<input id="cidade_id" type="text" name="Cidade" placeholder="Qual e a sua cidade">
+<input type="submit" value="Enviar">
+    </form>
+
+    <form name="dados" onsubmit="obrigado()" >
+    Digite o seu nome:
+    <input type="text" name="home">
+    <input type="submit" value="Enviar">
+    </form>
+
+    <form >
+    <fieldset>
+    <legend>Informaçao pessoal</legend>
+    Nome: <br>
+    <input type="text" name="nome" value="Mickey">
+    <br>
+    Apelido: <br>
+    <input type="text" name="Apelido" value="Mouse">
+    <br><br>
+    Comentario:
+    <textarea name="Comentario" id="comentario_id" rows="4" cols="50" maxlength="140">
+    </textarea><br><br>
+    <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+
+
+</body>
+</html>
