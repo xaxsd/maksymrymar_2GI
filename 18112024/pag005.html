@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript">
+        function escrever() {
+            var test = document.forml.caixa.value;
+            alert("Escreveste:" + test);
+        }
+    </script>
+</head>
+<body>
+    
+    <form name="form1">
+    Introduza o seu nome;
+    <input type="text" name="caixa" value="">
+
+    <input type="button" name="botao" value="submeter" onclick="escrever()">
+    </form>
+</body>
+</html>

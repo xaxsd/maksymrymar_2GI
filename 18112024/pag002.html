@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    label {
+    width: 150;
+    display: inline-block;
+    vertical-align: top;
+    }
+
+    input{
+        width: 200px;}
+
+    .formlinha {
+    margin-bottom: 20px;
+    }
+
+    fieldset {
+        display: block;
+        margin-left: 20px;
+        margin-right: 200px;
+        padding-top: 50px;
+        padding-bottom:50px ;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 5px dashed gold;
+    }
+
+    h1 {
+        font-size: 55px;
+        text-align: center;
+        background-color: #FAFAD2;
+        color: #800000;
+        border: 8px groove chocolate;
+    }
+    </style>
+
+<script>
+    function obrigado(){
+        window.alert("Obrigado pela visita!")
+        window.open("http/://www.wesleymissoncecenter.org/images/thankyou.png","janeira")
+    
+    }
+
+
+</script>   
+
+</head>
+<body>
+    <div id="content"><h1>Dados de Contacto0</h1>
+    <form method="get">
+
+
+    <fieldset>
+        <legend><h2>Dados Pessoais</h2></legend>
+
+    <div class="formlinha">
+    <label for="contactHome">Home:</label>
+    <input name="contactHome" id="contactHome" type="text"/>
+    </div>
+
+    <div class="formlinha">
+    <LAbel for="Tlmnumero">Numero Telemovel</LAbel>
+    <input name="Tlmnumero" id="Tlmnumero" type="text"/>
+
+    <div class="formlinha">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email"/>
+    </div>
+
+    <div class="formlinha">
+        <label for="notes">Comentario</label>
+        <textarea name="notas" cols="40" rows="6" maxlength="200"></textarea>
+        </div>
+
+    <div class="formlinha">
+    <input style="width: 100px;" type="submit" value="Enviar"/>
+    </div>
+
+    </div>
+    </fieldset>
+    Insira a avaliaçao(Entre 1 e5):
+    <input type="number" name="avaliaçao" min="1" max="5">
+    <br><br>
+
+    <fieldset>
+    <legend>Contactos Pessoais</legend>
+    <br>
+    <label for="email_id">Email:</label>
+    <input id="email_id" name="email" type="email"><br><br>
+
+    <label for="telefone_id">Numero de Telemovel</label>
+    <input id="telefone_id" name="telefone" type="tel"><br><br>
+
+    <label for="url_id">Site da empresa</label>
+    <input id="url_id" name="url" type="url"><br><br>
+
+    <label for="data_id">data de nascimento</label>
+    <input type="data" id="data_id" name="data"><br><br>
+
+    <label for="data_id_id">data</label>
+    <input id="data_hara_id" name="data_hora" type="datetime-local"><br><br>
+
+    <label for="mes_id">mes</label>
+    <input id="mes_id" name="mes" type="month"><br><br>
+
+    <label for="hora_id">data</label>
+    <input id="hora_id" name="hora" type="time"><br><br>
+
+    <label for="semana_id">semana</label>
+    <input id="semana_id" name="semana" type="week"><br>
+
+
+    <input id="senha_id" name="senha" type="password">
+    <input id="sim_id" name="newsletter" type="checkbox" value="sim">
+        <br>
+        <br>
+    <input id="java_id" type="checkbox" value="java" name="linguagens"checked>Java
+    <input id="csharp_id" type="checkbox" value="csharp" name="linguagens">C#
+    <input id="php_id" type="checkbox" value="php" name="linguagens"checked>php
+    <input id="ruby_id" type="checkbox" value="ruby" name="linguagens">ruby
+    </fieldset>
+
+    <fieldset>
+        <legend>Cidade</legend>
+        <input id="sp_id" type="radio" value="sao_paulo" name="club">Sao Paulo
+        <input id="barcelona_id" type="radio" value="barcelona" name="club">Barcelona
+        <input id="milan_id" type="radio" value="milan" name="club">Milan
+        <input id="mu_id" type="radio" value="Manchester" name="club">Manchester United
+        <input id="bdm_id" type="radio" value="bayern" name="club">Bayern Munique
+        </fieldset>
+    </form>
+    </div>
+
+
+</body>
+</html>
