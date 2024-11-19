@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Jogo das Imagens</h1>
+    <script>
+        function correcao()
+        {
+        filme1=document.getElementById("resposta").value;
+        if (filme1=="velocidade furiosa")
+            alert('Acertou. Pontuacao; 5 pontos');}
+        else{
+            alert('Tente outra vez');}
+        }
+    
+    </script>
+</head>
+<body>
+    <img src="filme.jpg" width="250" height="320"><br><br>
+    <form name="form1">
+    Introduza o nome do filme:
+    <input type="text" id="resposta" style="text-transform: uppercase;" size="30"><br>
+    <button type="button" onclick="correcao()">Clique aqui para ver o seu resultado
+
+    </button>
+    </form>
+</body>
+</html>

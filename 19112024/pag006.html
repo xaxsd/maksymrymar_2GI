@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Introduza um numero e clique em OK</p>
+
+    <input id="id1" type="number" min="50" max="100">
+    <button onclick="myFuncion()">Ok</button>
+
+    <h3>Se</h3>
+    <h2 id="cia"></h2>
+
+    <script>
+        function myFuncion(){
+            var fbi =document.getElementById("id1");
+            if (fbi.checkValidity() == false) {
+                document.getElementById("cia").innerHTML = fbi.validationMessage;
+            } else {
+                document.getElementById("cia").innerHTML = "Entarada de dados Ok"
+            }
+        }
+    </script>
+</body>
+</html>

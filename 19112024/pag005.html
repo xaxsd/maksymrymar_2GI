@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function AdicionaSelect(){
+            var i = document.form.select.selectIndex;
+            var j = document.form.select[i].text;
+            document.form.txt.value = j;
+        }
+
+    </script>
+</head>
+<body>
+    <form name="form">
+        <select name="select">
+            <option value="Lisboa">Lisboa</option>
+            <option value="Porto">Porto</option>
+            <option value="Braga">Braga</option>
+        </select>
+        <br><br>
+        <input type="txt" type="text">
+    </form>
+    <input type="add" type="button" onclick="AdicionaSelect()" value="Adicionar">
+</body>
+</html>
