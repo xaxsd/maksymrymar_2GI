@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+    <fieldset>
+    <legend>Informaçao Pessoal</legend>
+    <br>
+    <label for="name_id">Nome Completo:</label>
+    <input type="text" name="nome" size="60" value="">
+    <br><br>
+    <label for="sexo_id">Sexo:</label>
+    <input id="masculino_id" name="sexo_info" type="radio" value="masculino">Masculino
+    <br><br>
+    <input id="feminino_id" name="sexo_info" type="radio" value="feminino">feminino
+    <br><br>
+    <label for="morada_id">Morada:</label>
+    <input type="text" name="morada" size="100" value="">
+    <br><br>
+
+    <label for="localidade_id">localide:</label>
+    <input id="localidade_id" name="localide" type="text" list="localides">
+    <datalist id="localides">
+    <option value="Lisboa">Lisboa
+    <option value="Odiavelas">Odiavelas
+    <option value="Amadora">Amadora
+    <option value="Oeiras">Oeiras
+    <option value="Alverca">Alverca
+    </datalist><br><br>
+    <label for="tel_id">telefone</label>
+    <input id="tel_id" type="tel" name="telefone" size="30" placeholder="Nº" de telefone><br><br>
+    <label for="naturalidade_id">Naturalidade:</label>
+    <select name="Naturalidade" id="naturalidade_id">
+        <option value="Lisboa">Portugal
+        <option value="Odiavelas">angola
+        <option value="Amadora">barasil
+        <option value="Oeiras">frança
+        <option value="Alverca">Outra
+    </select><br><br>
+    </fieldset><br>
+    <input type="submit" type="Enviar">
+    </form>
+</body>
+</html>
