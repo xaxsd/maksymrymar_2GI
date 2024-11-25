@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+    <fieldset>
+        <legend>INFORMAÇAO PESSOAL:</legend>
+        <br>
+        <label>nome completo:</label>
+        <input type="text" name="nome" size="40" placeholder="Digite o seu nome completo">
+        <br><br>
+
+        <label>Idade:</label>
+        <input 
+        name="idade"
+        type="number"
+        min="18"
+        max="65"
+        title="A idade minima e 18 anos e a maxima e 65 anos">anos. <br><br>
+        
+        <label>Emaill:</label>
+        <input name="email" type="email" size="50"> <br><br>
+
+        <label>Site:</label>
+        <input name="url" type="url" size="50"> <br><br>
+
+        <label>Codigo Postal:</label>
+        <input
+        name="cod_postal" 
+        type="text" 
+        pattern="{0-9}{4}-{0-9}{3}"
+        title="O codigo postal e formado por 4 digidos de 3 digitos ex: 1500-120">
+        <br><br>
+
+    </fieldset>
+    <br>
+    <input type="reset" value="Limpar"> <br><br>
+    <input type="submit" value="Enviar dado!">
+    <br>
+    </form>
+
+    
+</body>
+</html>
