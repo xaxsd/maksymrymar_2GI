@@ -1,0 +1,251 @@
+/* Resetando estilos básicos para garantir consistência */
+* {
+    margin: 0; /* Remove as margens de todos os elementos */
+    padding: 0; /* Remove o preenchimento de todos os elementos */
+    border: none; /* Remove as bordas */
+    outline: none; /* Remove o contorno */
+    list-style: none; /* Remove o estilo de lista (bolinhas, números, etc.) */
+    box-sizing: border-box; /* Inclui a borda e o preenchimento no cálculo da largura e altura */
+    font-family: 'Ubuntu', sans-serif; /* Define a fonte usada em todo o site */
+}
+
+/* Estilos para a seção principal */
+section {
+    background: linear-gradient(25deg, #050505, #282828, #050505); /* Define um fundo em gradiente diagonal */
+    width: 100%; /* Largura 100% da tela */
+    height: 100vh; /* Altura 100% da altura da tela */
+    display: flex; /* Usando flexbox para centralizar conteúdo */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse a área da seção */
+}
+
+/* Estilos para a área principal de conteúdo */
+.main {
+    background: #1c1c1c; /* Fundo escuro para a área principal */
+    width: 440px; /* Largura fixa */
+    height: 540px; /* Altura fixa */
+    position: relative; /* Necessário para posicionamento absoluto das bordas */
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse a área */
+}
+
+/* Estilos para bordas animadas */
+.border::before, .border::after {
+    content: ''; /* Adiciona conteúdo vazio para as bordas */
+    display: block; /* Torna as bordas blocos */
+    width: 440px; /* Largura da borda */
+    height: 540px; /* Altura da borda */
+    position: absolute; /* Posiciona as bordas absolutamente */
+    top: -50%; /* Coloca a borda acima da área principal */
+    left: -50%; /* Coloca a borda à esquerda da área principal */
+    z-index: 1; /* Garante que a borda esteja atrás do conteúdo principal */
+    transform-origin: bottom right; /* A animação vai girar a partir do canto inferior direito */
+    animation: anime 6s linear infinite; /* Animação de rotação contínua */
+}
+
+/* Estilos para a borda com gradiente */
+.border:nth-of-type(1)::before, .border:nth-of-type(1)::after {
+    background: linear-gradient(0deg, transparent, transparent, #ffffff, #ffffff, #ffffff); /* Gradiente branco para as bordas */
+}
+
+/* Segundo conjunto de bordas com animações com atraso */
+.border:nth-of-type(2)::before, .border:nth-of-type(2)::after {
+    background: linear-gradient(0deg, transparent, transparent, #ffffff, #ffffff, #ffffff); /* Gradiente branco para as bordas */
+}
+
+/* Diferentes tempos de animação para as bordas */
+.border:nth-of-type(1):after {
+    animation-delay: -3s;
+}
+.border:nth-of-type(2):before {
+    animation-delay: -1.5s;
+}
+.border:nth-of-type(2):after {
+    animation-delay: -4.5s;
+}
+
+/* Animação de rotação contínua */
+@keyframes anime {
+    0% {
+        transform: rotate(0deg); /* Início da animação com 0 graus de rotação */
+    }
+    100% {
+        transform: rotate(360deg); /* Final da animação com 360 graus de rotação */
+    }
+}
+
+/* Estilos para o formulário */
+.form {
+    background: #222; /* Fundo escuro para o formulário */
+    width: 420px; /* Largura fixa */
+    height: 520px; /* Altura fixa */
+    position: absolute; /* Posiciona o formulário no topo da tela */
+    z-index: 2; /* Garante que o formulário fique sobre as bordas */
+    display: flex; /* Usando flexbox para alinhar os elementos */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaçamento entre os elementos */
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+/* Estilos para o título do formulário */
+.form form h2 {
+    color: #fff; /* Cor branca para o título */
+    font-size: 32px; /* Tamanho grande para o título */
+    font-weight: 700; /* Deixa o título em negrito */
+    text-align: center; /* Centraliza o título */
+    letter-spacing: 5px; /* Aumenta o espaçamento entre as letras */
+    padding: 0 0 20px 5px; /* Espaçamento ao redor do título */
+}
+
+/* Estilos para os campos de entrada */
+.form form div {
+    width: 100%; /* Largura total do campo */
+    margin: 30px 0 0 0; /* Espaçamento no topo */
+    position: relative; /* Necessário para o posicionamento dos elementos dentro */
+    display: flex; /* Usando flexbox para alinhar os elementos */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* Estilos para os inputs */
+.form form div input {
+    background: transparent; /* Fundo transparente para o campo de entrada */
+    width: 80%; /* Largura de 80% do campo */
+    padding: 25px 10px 15px 10px; /* Preenchimento no campo */
+    color: #fff; /* Cor do texto em branco */
+    font-size: 22px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+    text-align: center; /* Alinha o texto no centro */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    position: relative; /* Posiciona o input dentro do div */
+    z-index: 5; /* Garante que o input fique acima do fundo */
+}
+
+/* Estilos quando o campo está válido ou em foco */
+.form form div input:valid, .form form div input:focus {
+    width: 100%; /* Expande o campo para 100% da largura */
+}
+
+/* Estilos para o texto de label */
+.form form div span {
+    width: 100%; /* Largura total para o texto */
+    padding: 20px 0; /* Preenchimento vertical no texto */
+    color: #ccc; /* Cor do texto em cinza */
+    font-size: 22px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    position: absolute; /* Posiciona o texto dentro do campo */
+    left: 0; /* Posiciona à esquerda */
+    z-index: 4; /* Coloca o texto abaixo do input */
+    transition: 0.5s; /* Transição suave */
+}
+
+/* Estilos para o texto quando o campo é focado ou válido */
+.form form div input:valid ~ span, .form form div input:focus ~ span {
+    color: #ffffff; /* Muda a cor para branco */
+    font-size: 14px; /* Diminui o tamanho da fonte */
+    transform: translateY(-30%); /* Move o texto para cima */
+}
+
+/* Estilos para o ícone dentro do campo */
+.form form div i {
+    background: #323232; /* Cor de fundo para o ícone */
+    width: 80%; /* Largura de 80% do campo */
+    height: 100%; /* Altura total */
+    position: absolute; /* Posiciona o ícone dentro do campo */
+    top: 0; /* Posiciona no topo do campo */
+    z-index: 3; /* Coloca o ícone acima do fundo */
+    transition: 0.5s; /* Transição suave */
+}
+
+/* Estilos para o ícone quando o campo é válido ou focado */
+.form form div input:valid ~ i, .form form div input:focus ~ i {
+    width: 100%; /* Expande o ícone para 100% da largura */
+}
+
+/* Estilos para o botão de envio */
+.form form input[type="submit"] {
+    display: block; /* Torna o botão um bloco */
+    background: #ffffff; /* Fundo branco */
+    padding: 15px 25px; /* Preenchimento no botão */
+    margin: 30px auto 0 auto; /* Margem automática para centralizar */
+    color: #222; /* Cor do texto do botão */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte em negrito */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    cursor: pointer; /* Muda o cursor para mão ao passar o mouse */
+    transition: 0.5s; /* Transição suave */
+}
+
+/* Estilos para o botão ao passar o mouse */
+.form form input[type="submit"]:hover {
+    background: transparent; /* Fundo transparente */
+    color: #ffffff; /* Cor do texto em branco */
+    padding: 15px 60px; /* Aumenta o preenchimento */
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* Adiciona sombra ao botão */
+}
+
+/* Estilos para a lista de itens */
+ul {
+    width: 100%; /* Largura total da lista */
+    padding: 0 50px 40px 50px; /* Preenchimento nas laterais */
+    display: flex; /* Usando flexbox para alinhamento dos itens */
+    justify-content: space-between; /* Espaço entre os itens */
+}
+
+/* Estilos para os itens da lista */
+ul li {
+    color: #ccc; /* Cor do texto em cinza */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+/* Estilos para o botão de pular */
+.form form button#skipBtn {
+    display: block; /* Torna o botão um bloco */
+    background: transparent; /* Fundo transparente */
+    border: 2px solid #ffffff; /* Borda branca */
+    color: #ffffff; /* Cor do texto em branco */
+    padding: 15px 25px; /* Preenchimento no botão */
+    margin: 20px auto 0 auto; /* Margem automática para centralizar */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte em negrito */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    text-align: center; /* Alinha o texto no centro */
+    transition: 0.5s; /* Transição suave */
+}
+
+/* Estilos para o botão de pular ao passar o mouse */
+.form form button#skipBtn:hover {
+    background: #ffffff; /* Fundo branco ao passar o mouse */
+    color: #222; /* Cor do texto em preto */
+    padding: 15px 60px; /* Aumenta o preenchimento */
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* Adiciona sombra ao botão */
+}
+
+/* Estilos compartilhados para os botões Skip, Registrar e outros */
+ul li, .form form input[type="submit"], .form form button {
+    display: block; /* Torna os botões blocos */
+    background: transparent; /* Fundo transparente */
+    border: 2px solid #ffffff; /* Borda branca */
+    color: #ffffff; /* Cor do texto em branco */
+    padding: 15px 25px; /* Preenchimento */
+    margin: 20px auto 0 auto; /* Centraliza */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte */
+    cursor: pointer; /* Cursor de mão */
+    text-align: center; /* Centraliza o texto */
+    transition: 0.5s; /* Transição suave */
+}
+
+/* Estilos para os botões ao passar o mouse */
+ul li:hover, .form form input[type="submit"]:hover, .form form button:hover {
+    background: #ffffff; /* Fundo branco */
+    color: #222; /* Cor do texto em preto */
+    padding: 15px 60px; /* Aumenta o preenchimento */
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* Adiciona sombra ao botão */
+}
+

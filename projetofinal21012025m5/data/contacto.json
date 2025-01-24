@@ -1,0 +1,8 @@
+{
+    "contactReasons": {
+      "general": ["Your name", "Your email"],
+      "support": ["Issue type", "Problem description"],
+      "feedback": ["Your opinion"]
+    }
+  }
+  

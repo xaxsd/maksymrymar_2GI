@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="../css/statistics.css">
+    <script src="../js/statistics.js" defer></script>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+    
+</head>
+<body class="body light-theme">
+    <header>
+        <!-- Cabeçalho da página -->
+        <nav>
+            <ul class="nav-menu">
+                <!-- Menu de navegação -->
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gallery.html">Marcas de automóveis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="dropdown"> 
+                    <a href="#">Automóveis, serviços e acessórios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="revisao.html">Revisão do automóvel</a></li>
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li>
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li>
+                    </ul>
+                </li>   
+                
+                <!-- User Icon with Tooltip --> 
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <div id="statistics-container">
+        <h2>Estatísticas em tempo real</h2>
+        <div id="statistics-data">
+            <p>Visitantes online: <span id="visitors-count">0</span></p>
+            <p>Visualizações de páginas hoje: <span id="page-views">0</span></p>
+            <p>Likes: <span id="likes-count">0</span></p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Rodapé da página -->
+        <div class="footer-content">
+            <p>&copy; 2025</p> 
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,369 @@
+{
+    "images": [
+      {
+          "src": "../imagens/Abarth.png",
+          "alt": "Abarth",
+          "description": "Marca italiana conhecida, especializada em carros esportivos.",
+          "country": "Italy"
+      },
+      {
+          "src": "../imagens/acura.jpg",
+          "alt": "Acura",
+          "description": "Marca premium de automóveis da Honda, criada para o mercado dos EUA.",
+          "country": "USA"
+      },
+      {
+          "src": "../imagens/Aiways.png",
+          "alt": "Aiways",
+          "description": "Fabricante chinês de carros elétricos, popular por seu modelo U5.",
+          "country": "China"
+      },
+      {
+          "src": "../imagens/alfa.jpg",
+          "alt": "Alfa Romeo",
+          "description": "Marca italiana com uma rica história na fabricação de carros elegantes.",
+          "country": "Italy"
+      },
+      {
+          "src": "../imagens/Alpine.png",
+          "alt": "Alpine",
+          "description": "Marca francesa de carros esportivos, pertencente ao grupo Renault.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/aston.jpg",
+          "alt": "Aston Martin",
+          "description": "Marca britânica de carros esportivos de luxo.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/audi.jpg",
+          "alt": "Audi",
+          "description": "Fabricante alemão de carros premium, parte do grupo Volkswagen.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/bentley.jpg",
+          "alt": "Bentley",
+          "description": "Fabricante britânico de carros de luxo.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/bmw.jpg",
+          "alt": "BMW",
+          "description": "Marca alemã renomada, especializada em carros esportivos e de luxo.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/brilliance.jpg",
+          "alt": "Brilliance",
+          "description": "Marca chinesa que colabora com a BMW no mercado local.",
+          "country": "China"
+      },
+      {
+          "src": "../imagens/bugatti.jpg",
+          "alt": "Bugatti",
+          "description": "Fabricante francês de supercarros de velocidade e luxo impressionantes.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/buick.jpg",
+          "alt": "Buick",
+          "description": "Marca americana pertencente à General Motors, popular nos EUA e China.",
+          "country": "USA"
+      },
+      {
+          "src": "../imagens/byd1.jpg",
+          "alt": "BYD",
+          "description": "Um dos maiores fabricantes de carros elétricos do mundo.",
+          "country": "China"
+      },
+      {
+          "src": "../imagens/citroen.png",
+          "alt": "Citroën",
+          "description": "Marca francesa conhecida pelo design inovador e soluções tecnológicas.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/cupra.png",
+          "alt": "Cupra",
+          "description": "Marca esportiva espanhola, que se separou da SEAT.",
+          "country": "Spain"
+      },
+      {
+          "src": "../imagens/dacia.png",
+          "alt": "Dacia",
+          "description": "Marca romena que oferece carros acessíveis, parte do grupo Renault.",
+          "country": "Romania"
+      },
+      {
+          "src": "../imagens/dongfeng.png",
+          "alt": "Dongfeng",
+          "description": "Fabricante chinês de carros e veículos comerciais.",
+          "country": "China"
+      },
+      {
+          "src": "../imagens/DS.png",
+          "alt": "DS Automobiles",
+          "description": "Marca premium francesa criada pela Citroën.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/Fiat.png",
+          "alt": "Fiat",
+          "description": "Marca italiana popular com modelos acessíveis.",
+          "country": "Italy"
+      },
+      {
+          "src": "../imagens/Ford.png",
+          "alt": "Ford",
+          "description": "Fabricante americano de automóveis com renome mundial.",
+          "country": "USA"
+      },
+      {
+          "src": "../imagens/Honda.png",
+          "alt": "Honda",
+          "description": "Marca japonesa conhecida por sua confiabilidade e tecnologia.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Hyundai.png",
+          "alt": "Hyundai",
+          "description": "Marca sul-coreana que oferece uma vasta gama de modelos.",
+          "country": "South Korea"
+      },
+      {
+          "src": "../imagens/Jaguar.png",
+          "alt": "Jaguar",
+          "description": "Fabricante britânico de carros de luxo.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/Jeep.png",
+          "alt": "Jeep",
+          "description": "Marca icônica americana de veículos off-road.",
+          "country": "USA"
+      },
+      {
+          "src": "../imagens/Kgm.png",
+          "alt": "KGM",
+          "description": "Fabricante de veículos modernos.",
+          "country": "Unknown"
+      },
+      {
+          "src": "../imagens/KIA.png",
+          "alt": "KIA",
+          "description": "Marca sul-coreana com modelos populares no mundo todo.",
+          "country": "South Korea"
+      },
+      {
+          "src": "../imagens/Lamborghine.png",
+          "alt": "Lamborghini",
+          "description": "Marca italiana de supercarros renomada mundialmente.",
+          "country": "Italy"
+      },
+      {
+          "src": "../imagens/Land Rover.png",
+          "alt": "Land Rover",
+          "description": "Marca britânica de SUVs premium.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/Lexus.png",
+          "alt": "Lexus",
+          "description": "Marca premium criada pela Toyota.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Maserati.png",
+          "alt": "Maserati",
+          "description": "Marca italiana de carros esportivos.",
+          "country": "Italy"
+      },
+      {
+          "src": "../imagens/Mazda.png",
+          "alt": "Mazda",
+          "description": "Marca japonesa conhecida por seus motores inovadores SkyActiv.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Mercedes_Benz.png",
+          "alt": "Mercedes-Benz",
+          "description": "Marca alemã icônica de carros premium.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/MG.png",
+          "alt": "MG",
+          "description": "Marca britânica que foi revitalizada com apoio chinês.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/MINI.png",
+          "alt": "MINI",
+          "description": "Marca britânica de carros compactos.",
+          "country": "UK"
+      },
+      {
+          "src": "../imagens/Mitsubishi.png",
+          "alt": "Mitsubishi",
+          "description": "Fabricante japonês focado em SUVs.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Nissan.png",
+          "alt": "Nissan",
+          "description": "Fabricante global com inovações em carros elétricos.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Opel.png",
+          "alt": "Opel",
+          "description": "Marca alemã, parte do grupo Stellantis.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/Peugeot.png",
+          "alt": "Peugeot",
+          "description": "Marca francesa com uma longa história.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/Polestar.png",
+          "alt": "Polestar",
+          "description": "Marca elétrica criada pela Volvo.",
+          "country": "Sweden"
+      },
+      {
+          "src": "../imagens/Porsche.png",
+          "alt": "Porsche",
+          "description": "Fabricante alemão de carros esportivos.",
+          "country": "Ge´««many"
+      },
+      {
+          "src": "../imagens/Renault.png",
+          "alt": "Renault",
+          "description": "Marca francesa com uma vasta gama de modelos.",
+          "country": "France"
+      },
+      {
+          "src": "../imagens/SEAT.png",
+          "alt": "SEAT",
+          "description": "Marca espanhola, parte do grupo Volkswagen.",
+          "country": "Spain"
+      },
+      {
+          "src": "../imagens/Skoda.png",
+          "alt": "Skoda",
+          "description": "Marca tcheca com modelos práticos.",
+          "country": "Czech Republic"
+      },
+      {
+          "src": "../imagens/Smart.png",
+          "alt": "Smart",
+          "description": "Carros compactos urbanos da Mercedes-Benz.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/Suzuki.png",
+          "alt": "Suzuki",
+          "description": "Marca japonesa com carros compactos confiáveis.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/TESLA.png",
+          "alt": "Tesla",
+          "description": "Líder americano na produção de carros elétricos.",
+          "country": "USA"
+      },
+      {
+          "src": "../imagens/Toyota.png",
+          "alt": "Toyota",
+          "description": "Maior fabricante de carros do mundo.",
+          "country": "Japan"
+      },
+      {
+          "src": "../imagens/Volkswagen.png",
+          "alt": "Volkswagen",
+          "description": "Marca alemã com uma vasta gama de modelos.",
+          "country": "Germany"
+      },
+      {
+          "src": "../imagens/Volvo.png",
+          "alt": "Volvo",
+          "description": "Marca sueca com foco em segurança.",
+          "country": "Sweden"
+      },
+      {
+          "src": "../imagens/Voyah.png",
+          "alt": "Voyah",
+          "description": "Marca chinesa de luxo.",
+          "country": "China"
+      },
+      {
+          "src": "../imagens/XPENG.png",
+          "alt": "XPENG",
+          "description": "Líder chinês em inovações de carros elétricos.",
+          "country": "China"
+      }
+  ]  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  

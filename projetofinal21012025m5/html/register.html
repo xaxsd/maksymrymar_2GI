@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="../js/register.js" defer></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+</head>
+
+<body>
+
+     <!-- Seção principal para o formulário de registro -->
+     <section>
+        <div class="main">
+
+            <!-- Bordas decorativas -->
+            <span class="border"></span>
+            <span class="border"></span>
+
+            <!-- Formulário de registro -->
+            <div class="form">
+                <form id="registerForm">
+                    <!-- Título do formulário -->
+                    <h2>Register</h2>
+
+                    <!-- Campo para o nickname -->
+                    <div>
+                        <input type="text" id="nickname" required="required">
+                        <span>Nickname</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Campo para o email -->
+                    <div>
+                        <input type="email" id="registerEmail" required="required">
+                        <span>Email</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Campo para a senha -->
+                    <div>
+                        <input type="password" id="registerPassword" required="required">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Botão de submit -->
+                    <input type="submit" value="Register">
+                </form>
+
+                <!-- Link para voltar para a página de login -->
+                <ul>
+                    <li><a href="login.html">Back to Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

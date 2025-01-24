@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/revisao.js" defer></script> <!-- Link para o arquivo JavaScript -->
+    <title>Revisão</title>
+    <link rel="stylesheet" href="../css/revisao.css">
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="gallery.html">Marcas de automóveis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="dropdown">
+                    <a href="#">Automóveis, serviços e acessórios</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="revisao.html">Revisão do automóvel</a></li>
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li>
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li>
+                    </ul>
+                </li>
+
+                <!-- User Icon with Tooltip -->
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button> <!-- Botão para alternar o tema da página -->
+    </header>
+
+    <main>
+        <section>
+            <h2>Revisão de Automóveis</h2>
+            <p>Saiba mais sobre os modelos mais recentes de automóveis, suas características e as avaliações de especialistas.</p>
+        </section>
+    </main>
+
+    <div class="filter-container">
+        <label for="priceFilter">Filtro por preço: </label>
+        <input type="number" id="priceFilter" placeholder="Preço máximo" oninput="filterCars()">
+        
+        <label for="countryFilter">Filtro por país: </label>
+        <select id="countryFilter" onchange="filterCars()">
+            <option value="">Selecione o país</option>
+            <option value="Itália">Itália</option>
+            <option value="EUA">EUA</option>
+            <option value="Alemanha">Alemanha</option>
+            <option value="Japão">Japão</option>
+        </select>
+
+        <label for="rangeFilter">Filtro por autonomia (km): </label>
+        <input type="number" id="rangeFilter" placeholder="Autonomia máxima" oninput="filterCars()">
+
+        <label for="batteryFilter">Filtro por capacidade da bateria (kWh): </label>
+        <input type="number" id="batteryFilter" placeholder="Capacidade máxima" oninput="filterCars()">
+    </div>
+
+    <div class="car-container" id="carContainer">
+        <!-- Os carros serão adicionados aqui via JavaScript -->
+    </div>
+
+    <!-- Formulário para comentários -->
+    <h2>Deixe seu comentário</h2>
+    <form id="comment-form">
+        <div id="feedback-fields">
+            <label for="feedback">Seu comentário:</label>
+            <textarea id="feedback" name="feedback" placeholder="Escreva seu comentário aqui..." required></textarea><br><br>
+            <input type="submit" value="Enviar Comentário">
+        </div>
+    </form>
+
+    <div id="comments-section">
+        <h3>Comentários</h3>
+        <ul id="comments-list">
+            <!-- Comentários serão adicionados aqui -->
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

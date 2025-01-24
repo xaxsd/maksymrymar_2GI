@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <script src="../js/settings.js" defer></script>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+</head>
+<body class="body light-theme">
+    <header>
+        <!-- Cabeçalho da página -->
+        <nav>
+            <ul class="nav-menu"> <!-- Menu de navegação -->
+                <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="gallery.html">Marcas de automóveis</a></li> <!-- Link para a galeria de marcas -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link para a página de contato -->
+                <li><a href="statistics.html">Statistics</a></li> <!-- Link para a página de estatísticas -->
+                <li><a href="settings.html">Settings</a></li> <!-- Link para a página de configurações -->
+                <li class="dropdown"> <!-- Menu suspenso -->
+                    <a href="#">Automóveis, serviços e acessórios</a> <!-- Título do menu suspenso -->
+                    <ul class="dropdown-menu"> <!-- Itens do menu suspenso -->
+                        <li><a href="revisao.html">Revisão do automóvel</a></li>
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li>
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li>
+                    </ul>
+                </li>
+
+                <!-- User Icon with Tooltip -->
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button> <!-- Botão para alternar entre temas (pode ser controlado por JavaScript) -->
+    </header>
+
+    <div id="settings-container">
+        <!-- Contêiner das configurações do usuário -->
+        <h2>User Settings</h2> <!-- Título da seção de configurações -->
+
+        <!-- Formulário de configurações -->
+        <form id="settings-form">
+            <label>
+                <span>Username:</span> <!-- Texto explicativo para o campo de nome de usuário -->
+                <input type="text" id="username" /> <!-- Campo de entrada para o nome de usuário -->
+            </label>
+
+            <label>
+                <span>Preferred Language:</span> <!-- Texto explicativo para a escolha de idioma -->
+                <select id="language"> <!-- Lista suspensa para selecionar o idioma -->
+                    <option value="en">English</option>
+                    <option value="uk">Ukrainian</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </label>
+
+            <label>
+                <span>Theme:</span> <!-- Texto explicativo para a escolha do tema -->
+                <select id="theme"> <!-- Lista suspensa para selecionar o tema -->
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="purple">Purple</option>
+                </select>
+            </label>
+
+            <label>
+                <span>Email Notifications:</span> <!-- Texto explicativo para ativar notificações por e-mail -->
+                <input type="checkbox" id="email-notifications" /> <!-- Caixa de seleção para notificações por e-mail -->
+            </label>
+
+            <label>
+                <span>Timezone:</span> <!-- Texto explicativo para selecionar o fuso horário -->
+                <select id="timezone"> <!-- Lista suspensa para selecionar o fuso horário -->
+                    <option value="UTC">UTC</option>
+                    <option value="GMT">GMT</option>
+                    <option value="CET">CET</option>
+                    <option value="EST">EST</option>
+                    <option value="PST">PST</option>
+                </select>
+            </label>
+
+            <button type="button" id="save-settings">Save</button> <!-- Botão para salvar as configurações -->
+        </form>
+    </div>
+
+    <footer>
+        <!-- Rodapé da página -->
+        <div class="footer-content">
+            <p>&copy; 2025</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,333 @@
+:root {
+    /* Variáveis principais para o tema */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --text-color: #333333; /* Cor do texto */
+    --header-bg: #333333; /* Cor de fundo do cabeçalho */
+    --header-text: #ffffff; /* Cor do texto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse sobre o link */
+}
+
+/* Temas */
+
+/* Tema escuro */
+.dark-theme {
+    --bg-color: #333333; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #1a1a1a; /* Fundo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse sobre o link */
+}
+
+/* Tema amarelo */
+.yellow-theme {
+    --bg-color: #fff176; /* Fundo amarelo */
+    --text-color: #333333; /* Texto cinza escuro */
+    --header-bg: #f6ba23; /* Fundo amarelo para o cabeçalho */
+    --header-text: #000000; /* Texto preto para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema verde */
+.green-theme {
+    --bg-color: #4CAF50; /* Fundo verde */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #388E3C; /* Fundo verde escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema roxo */
+.purple-theme {
+    --bg-color: #9C27B0; /* Fundo roxo */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #8E24AA; /* Fundo roxo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Estilos para o body */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão para o documento */
+    line-height: 1.6; /* Altura das linhas */
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
+    background-color: var(--bg-color); /* Usa a variável para a cor de fundo */
+    color: var(--text-color); /* Usa a variável para a cor do texto */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudança de cores */
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: var(--header-bg); /* Cor de fundo do cabeçalho */
+    color: var(--header-text); /* Cor do texto no cabeçalho */
+    padding: 1rem; /* Padding ao redor do cabeçalho */
+    display: flex; /* Usando flexbox para alinhamento */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centralizando os itens verticalmente */
+}
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding */
+}
+
+nav ul li {
+    display: inline; /* Exibe os itens do menu na horizontal */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilos para o conteúdo principal (main) */
+main {
+    padding: 2rem; /* Padding ao redor do conteúdo */
+}
+
+/* Estilos para as seções */
+section {
+    margin-bottom: 2rem; /* Espaço entre as seções */
+}
+
+/* Estilos para os títulos */
+h1, h2 {
+    color: var(--text-color); /* Cor do texto dos títulos */
+}
+
+/* Estilos para a exibição das imagens */
+.image-container {
+    display: flex; /* Usando flexbox para o layout das imagens */
+    justify-content: space-around; /* Distribuindo as imagens igualmente */
+    flex-wrap: wrap; /* Permitindo que as imagens quebrem para a linha seguinte */
+}
+
+.image-container img {
+    margin: 1rem; /* Espaço ao redor das imagens */
+    transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de transformação */
+}
+
+.image-container img:hover {
+    transform: scale(1.1); /* Aumenta a imagem quando o mouse passa sobre ela */
+}
+
+/* Estilos para o rodapé (footer) */
+footer {
+    background-color: var(--header-bg); /* Cor de fundo do rodapé */
+    color: var(--header-text); /* Cor do texto no rodapé */
+    padding: 0.1rem 0; /* Padding superior e inferior */
+    width: 100%; /* Largura total */
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Fixa o rodapé na parte inferior */
+    left: 0; /* Alinha ao lado esquerdo */
+    z-index: 999; /* Coloca o rodapé acima de outros conteúdos */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do rodapé */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding */
+    margin: 1px; /* Margem superior do menu */
+    display: flex; /* Usando flexbox para o menu horizontal */
+    gap: 0.5rem; /* Espaço entre os itens */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 14px; /* Tamanho da fonte dos links */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Cor dos links ao passar o mouse */
+}
+
+/* Garantir que o rodapé ocupe toda a altura quando o conteúdo for pouco */
+body, html {
+    height: 100%; /* A altura da página é 100% */
+    margin: 0; /* Remove margens */
+}
+
+/* Principal conteúdo da página */
+main {
+    padding-bottom: 1.5rem; /* Espaço para o rodapé */
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    background-color: var(--text-color); /* Cor de fundo do botão */
+    color: var(--bg-color); /* Cor do texto no botão */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Padding no botão */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudança de cores */
+}
+
+/* Estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove as margens */
+    display: flex; /* Usando flexbox para alinhar os itens */
+}
+
+/* Estilos para cada item do menu */
+.nav-menu > li {
+    position: relative; /* Para o menu dropdown */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+.nav-menu a {
+    color: var(--header-text); /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 0.5rem 1rem; /* Padding no link */
+    display: block; /* Faz o link ser exibido como bloco */
+}
+
+/* Menu dropdown */
+.dropdown-menu {
+    display: none; /* O menu é ocultado por padrão */
+    position: absolute; /* Posiciona o menu abaixo do item */
+    top: 100%; /* Coloca o menu abaixo */
+    left: 0;
+    background-color: var(--header-bg); /* Cor de fundo do menu */
+    min-width: 150px; /* Largura mínima do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra no menu */
+    z-index: 1; /* Garante que o menu fique acima dos outros conteúdos */
+}
+
+.dropdown-menu li {
+    width: 100%; /* O menu ocupa toda a largura do item */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Padding no item do menu */
+    color: var(--header-text); /* Cor do texto do menu */
+}
+
+/* Exibe o menu dropdown ao passar o mouse sobre o item */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Exibe o menu */
+}
+
+/* Estilos para o item do menu ativo */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

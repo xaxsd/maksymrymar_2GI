@@ -1,0 +1,141 @@
+<!-- Автосервіс і ремонт -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/servico.css"> <!-- Link para o arquivo de estilo CSS -->
+    <script src="../js/servico.js"></script> <!-- Link para o arquivo JavaScript -->
+    <title>Serviço e reparação de automóveis</title>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+</head>
+<body>
+    <header>
+        <!-- Cabeçalho da página -->
+        <nav>
+            <ul class="nav-menu">
+                <!-- Menu de navegação -->
+                <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="gallery.html">Marcas de automóveis</a></li> <!-- Link para a galeria de marcas de carros -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link para a página de contato -->
+                <li><a href="statistics.html">Statistics</a></li> <!-- Link para a página de estatísticas -->
+                <li><a href="settings.html">Settings</a></li> <!-- Link para a página de configurações -->
+                <li class="dropdown"> 
+                    <!-- Menu suspenso -->
+                    <a href="#">Automóveis, serviços e acessórios</a> <!-- Título do menu suspenso -->
+                    <ul class="dropdown-menu"> 
+                        <!-- Itens do menu suspenso -->
+                        <li><a href="revisao.html">Revisão do automóvel</a></li> <!-- Link para a página de revisão do automóvel -->
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li> <!-- Link para a página de serviços e reparação -->
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li> <!-- Link para a página de acessórios e peças -->
+                    </ul>
+                </li>    
+                
+                <!-- User Icon with Tooltip -->
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button> <!-- Botão para alternar o tema da página -->
+    </header>
+
+    <div class="service-container">
+        <h1>Serviço e Reparação de Automóveis</h1> <!-- Título principal da seção -->
+
+        <!-- Seção de pesquisa de serviços -->
+        <section class="service-search">
+            <h2>Encontrar um serviço de automóveis</h2> <!-- Título da seção de pesquisa -->
+            <input type="text" id="serviceSearch" placeholder="Digite a cidade ou serviço" oninput="filterServices()"> <!-- Campo de pesquisa para encontrar serviços -->
+        </section>
+
+        <!-- Seção de lista de serviços de automóveis -->
+        <section class="service-list" id="serviceList">
+            <!-- A lista de serviços será adicionada dinamicamente aqui -->
+        </section>
+
+        <!-- Seção de dicas de cuidados com o automóvel -->
+        <section class="car-care-tips">
+            <h2>Dicas úteis para cuidar do seu automóvel</h2> <!-- Título das dicas -->
+
+            <!-- Categoria de dicas sobre manutenção regular -->
+            <div class="tip-category">
+                <h3>Manutenção Regular</h3>
+                <ul>
+                    <li><strong>Troca de óleo:</strong> Não se esqueça de trocar o óleo do motor e os filtros de acordo com as recomendações do fabricante.</li>
+                    <li><strong>Inspeção técnica:</strong> Faça inspeções regulares para verificar os freios, suspensão e outros componentes importantes.</li>
+                    <li><strong>Limpeza do sistema de resfriamento:</strong> Limpeza do radiador e troca do líquido de resfriamento para evitar o superaquecimento do motor.</li>
+                </ul>
+            </div>
+
+            <!-- Categoria de dicas para cuidados no inverno -->
+            <div class="tip-category">
+                <h3>Cuidado no Inverno</h3>
+                <ul>
+                    <li><strong>Verificação da bateria:</strong> O frio pode afetar o estado da bateria, então verifique o nível de carga e a condição da bateria.</li>
+                    <li><strong>Pneus:</strong> Pneus de inverno oferecem melhor aderência à estrada, então instale-os antes do inverno.</li>
+                    <li><strong>Nível de anticongelante:</strong> Certifique-se de que o nível de anticongelante está adequado para garantir o funcionamento correto no inverno.</li>
+                </ul>
+            </div>
+
+            <!-- Categoria de dicas para cuidados com a carroceria -->
+            <div class="tip-category">
+                <h3>Cuidados com a Carroceria</h3>
+                <ul>
+                    <li><strong>Lavagem do carro:</strong> Lavar regularmente o carro ajuda a proteger a carroceria contra sujeira e corrosão.</li>
+                    <li><strong>Proteção contra corrosão:</strong> Use produtos específicos para proteger a carroceria contra corrosão.</li>
+                    <li><strong>Polimento e aplicação de cera:</strong> Para manter o brilho e proteger a pintura do carro.</li>
+                </ul>
+            </div>
+
+            <!-- Categoria de dicas para limpeza do ar condicionado e filtros de ar -->
+            <div class="tip-category">
+                <h3>Sistema de Ar Condicionado e Filtros de Ar</h3>
+                <ul>
+                    <li><strong>Limpeza do ar condicionado:</strong> A limpeza regular ajuda a evitar odores desagradáveis no interior do carro.</li>
+                    <li><strong>Filtros de cabine:</strong> Troque os filtros de cabine a cada 10-15 mil km para garantir a qualidade do ar dentro do veículo.</li>
+                </ul>
+            </div>
+
+            <!-- Categoria de dicas para verificação e troca de peças importantes -->
+            <div class="tip-category">
+                <h3>Verificação e Troca de Peças Importantes</h3>
+                <ul>
+                    <li><strong>Velas de ignição:</strong> Troque as velas de ignição a cada 30-50 mil km para garantir o funcionamento adequado do motor.</li>
+                    <li><strong>Correias e correntes:</strong> Verifique o estado das correias e correntes para evitar falhas graves.</li>
+                    <li><strong>Reparo da transmissão:</strong> Verifique regularmente o nível e o estado do fluido de transmissão para manter a caixa de câmbio funcionando adequadamente.</li>
+                </ul>
+            </div>
+
+            <!-- Categoria de outras dicas úteis -->
+            <div class="tip-category">
+                <h3>Outras Dicas</h3>
+                <ul>
+                    <li><strong>Pressão dos pneus:</strong> Verifique regularmente a pressão dos pneus para melhorar a economia de combustível e a segurança na estrada.</li>
+                    <li><strong>Limpeza das lâmpadas:</strong> Limpe os faróis e lanternas para garantir boa visibilidade em todas as condições de direção.</li>
+                </ul>
+            </div>
+
+            <!-- Botão para mostrar mais dicas -->
+            <button id="showMoreBtn" onclick="toggleTips()">Mostrar mais</button>
+        </section>
+
+    </div>
+
+    <footer>
+        <!-- Rodapé da página -->
+        <div class="footer-content">
+            <p>&copy; 2025</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

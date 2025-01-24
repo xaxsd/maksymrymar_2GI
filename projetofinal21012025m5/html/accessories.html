@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessórios e peças sobresselentes</title>
+    <link rel="stylesheet" href="../css/accessories.css">
+    <script src="../js/accessories.js" defer></script>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png">
+</head>
+<body class="body light-theme">
+    <header>
+        <!-- Cabeçalho da página com o menu de navegação -->
+        <nav>
+            <ul class="nav-menu">
+                <!-- Menu de navegação com links para as páginas principais -->
+                <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="gallery.html">Marcas de automóveis</a></li> <!-- Link para a galeria de marcas de carros -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link para a página de contato -->
+                <li><a href="statistics.html">Statistics</a></li> <!-- Link para a página de estatísticas -->
+                <li><a href="settings.html">Settings</a></li> <!-- Link para a página de configurações -->
+                <li class="dropdown">
+                    <!-- Menu suspenso com opções de acessórios e serviços automotivos -->
+                    <a href="#">Automóveis, serviços e acessórios</a>
+                    <ul class="dropdown-menu">
+                        <!-- Itens do menu suspenso -->
+                        <li><a href="revisao.html">Revisão do automóvel</a></li>
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li>
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li>
+                    </ul>
+                </li>
+
+                <!-- User Icon with Tooltip -->
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        
+        <!-- Botão para alternar entre o tema claro e escuro -->
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main>
+        <!-- Título principal da página -->
+        <h1>Acessórios e peças sobresselentes</h1>
+        <!-- Contêiner para exibir os acessórios (pode ser preenchido dinamicamente via JS) -->
+        <div id="accessoriesContainer"></div>
+    </main>
+
+    <section class="accessories-and-parts">
+        <h2>Acessórios e peças sobresselentes</h2>
+        
+        <!-- Descrição geral da seção de acessórios e peças -->
+        <p>Navegue pela vasta gama de acessórios e peças sobresselentes para o seu veículo. Aqui encontrará tudo, desde peças sobresselentes a acessórios opcionais para melhorar o aspeto e o toque do seu veículo.</p>
+        
+        <!-- Filtros para refinar a pesquisa dos produtos -->
+        <div class="filters">
+            <h3>Filtros</h3>
+            <form>
+                <!-- Filtro de categoria de produto -->
+                <label for="category">Categoria:</label>
+                <select id="category">
+                    <option value="all">Todas as categorias</option>
+                    <option value="tires">Pneus</option>
+                    <option value="battery">Baterias</option>
+                    <option value="brakes">Sistemas de travões</option>
+                    <option value="lighting">Engenharia de iluminação</option>
+                    <option value="interior">Interior</option>
+                </select>
+                <!-- Filtros de preço (mínimo e máximo) -->
+                <label for="price">Preço:</label>
+                <input type="number" id="min-price" placeholder="De">
+                <input type="number" id="max-price" placeholder="Para">
+                <button type="submit">Aplicar um filtro</button>
+            </form>
+        </div>
+        
+        <!-- Exibição dos produtos com suas informações -->
+        <div class="product-container">
+            <!-- Produto 1: Pneus -->
+            <div class="product" data-category="tires" data-price="150">
+                <img src="tire.jpg" alt="Pneus" class="product-image">
+                <h4>Pneus Michelin</h4>
+                <p>Shina de alta qualidade para todas as condições climáticas e rodoviárias. Durabilidade e confiabilidade.</p>
+                <span class="price">$150</span>
+                <button class="view-details">Ver detalhes</button>
+            </div>
+        
+            <!-- Produto 2: Bateria -->
+            <div class="product" data-category="battery" data-price="120">
+                <img src="battery.jpg" alt="Bateria" class="product-image">
+                <h4>Bateria Varta</h4>
+                <p>Bateria confiável com longa vida útil para garantir o funcionamento estável do seu veículo.</p>
+                <span class="price">$120</span>
+                <button class="view-details">Ver detalhes</button>
+            </div>
+        
+            <!-- Produto 3: Pastilhas de freio -->
+            <div class="product" data-category="brakes" data-price="80">
+                <img src="brake-pads.jpg" alt="Pastilhas de freio" class="product-image">
+                <h4>Pastilhas de freio Brembo</h4>
+                <p>Pastilhas de freio de última geração para alta eficiência de frenagem.</p>
+                <span class="price">$80</span>
+                <button class="view-details">Ver detalhes</button>
+            </div>
+        
+            <!-- Produto 4: Luzes LED -->
+            <div class="product" data-category="lighting" data-price="50">
+                <img src="led-lights.jpg" alt="Luzes LED" class="product-image">
+                <h4>Luzes LED Philips</h4>
+                <p>Luzes LED econômicas para melhor iluminação na estrada.</p>
+                <span class="price">$50</span>
+                <button class="view-details">Ver detalhes</button>
+            </div>
+        
+            <!-- Produto 5: Capas de banco -->
+            <div class="product" data-category="interior" data-price="40">
+                <img src="seat-covers.jpg" alt="Capas de banco" class="product-image">
+                <h4>Capas de banco</h4>
+                <p>Capas confortáveis para bancos, proporcionando proteção e um visual elegante para o interior do seu veículo.</p>
+                <span class="price">$40</span>
+                <button class="view-details">Ver detalhes</button>
+            </div>
+        </div>       
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

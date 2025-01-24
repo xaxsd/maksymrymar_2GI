@@ -1,0 +1,492 @@
+:root {
+    /* Variáveis principais para o tema */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --text-color: #333333; /* Cor do texto */
+    --header-bg: #333333; /* Cor de fundo para o cabeçalho */
+    --header-text: #ffffff; /* Cor do texto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Temas */
+
+/* Tema escuro */
+.dark-theme {
+    --bg-color: #333333; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #1a1a1a; /* Fundo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse sobre o link */
+}
+
+/* Tema amarelo */
+.yellow-theme {
+    --bg-color: #fff176; /* Fundo amarelo */
+    --text-color: #333333; /* Texto cinza escuro */
+    --header-bg: #f6ba23; /* Fundo amarelo para o cabeçalho */
+    --header-text: #000000; /* Texto preto para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema verde */
+.green-theme {
+    --bg-color: #4CAF50; /* Fundo verde */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #388E3C; /* Fundo verde escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema roxo */
+.purple-theme {
+    --bg-color: #9C27B0; /* Fundo roxo */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #8E24AA; /* Fundo roxo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Estilos principais para o corpo */
+body {
+    font-family: Arial, sans-serif; /* Fonte para o documento inteiro */
+    line-height: 1.6; /* Altura da linha */
+    margin: 0; /* Remover margens */
+    padding: 0; /* Remover preenchimento */
+    background-color: var(--bg-color); /* Usar variável para o fundo */
+    color: var(--text-color); /* Usar variável para a cor do texto */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: var(--header-bg); /* Cor de fundo do cabeçalho */
+    color: var(--header-text); /* Cor do texto no cabeçalho */
+    padding: 1rem; /* Preenchimento ao redor do cabeçalho */
+    display: flex; /* Usar flexbox para alinhamento dos elementos */
+    justify-content: space-between; /* Distribuir os elementos com espaço */
+    align-items: center; /* Alinhar os itens verticalmente */
+}
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none; /* Desativar marcadores de lista */
+    padding: 0; /* Remover preenchimento */
+}
+
+nav ul li {
+    display: inline; /* Criar lista horizontal */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+/* Conteúdo principal da página */
+main {
+    padding: 2rem; /* Preenchimento ao redor do conteúdo principal */
+}
+
+/* Estilos para seções */
+section {
+    margin-bottom: 2rem; /* Espaço entre as seções */
+}
+
+h1, h2 {
+    color: var(--text-color); /* Cor do texto nos títulos */
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: var(--header-bg); /* Cor de fundo do footer */
+    color: var(--header-text); /* Cor do texto no footer */
+    padding: 0.1rem 0; /* Preenchimento superior e inferior */
+    width: 100%; /* Largura 100% */
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Fixo no fundo */
+    left: 0; /* Alinha à esquerda */
+    z-index: 999; /* Z-index alto para garantir que o footer esteja acima de outros conteúdos */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 1px; /* Espaçamento superior para o menu */
+    display: flex; /* Usar flexbox para o menu horizontal */
+    gap: 0.5rem; /* Espaço entre os itens */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Cor do texto dos links */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Cor ao passar o mouse */
+}
+
+/* Garante que o footer ocupe toda a altura, caso o conteúdo seja pequeno */
+body, html {
+    height: 100%; /* Altura da página é 100% */
+    margin: 0; /* Sem margens */
+}
+
+/* Preenchimento inferior do conteúdo para o footer */
+main {
+    padding-bottom: 1.5rem; /* Espaço para o footer */
+}
+
+/* Botão para alternar temas */
+#theme-toggle {
+    background-color: var(--text-color); /* Cor de fundo do botão */
+    color: var(--bg-color); /* Cor do texto no botão */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Preenchimento dentro do botão */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+/* Estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Desativa marcadores de lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove margens */
+    display: flex; /* Usa flexbox para o alinhamento */
+}
+
+/* Estilos para cada item no menu */
+.nav-menu > li {
+    position: relative; /* Para o menu suspenso */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+.nav-menu a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Sem sublinhado */
+    padding: 0.5rem 1rem; /* Preenchimento dentro do item */
+    display: block; /* Faz o link se tornar um bloco */
+}
+
+/* Menu suspenso */
+.dropdown-menu {
+    display: none; /* Esconde o menu por padrão */
+    position: absolute; /* Posiciona o menu abaixo do item */
+    top: 100%; /* Fica logo abaixo do item */
+    left: 0;
+    background-color: var(--header-bg); /* Cor de fundo do menu */
+    min-width: 150px; /* Largura mínima do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para o menu */
+    z-index: 1; /* Z-index para garantir que o menu fique sobre outros elementos */
+}
+
+.dropdown-menu li {
+    width: 100%; /* O menu ocupa toda a largura do item */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Preenchimento dentro do item */
+    color: var(--header-text); /* Cor do texto */
+}
+
+/* Mostrar menu suspenso ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostra o menu */
+}
+
+/* Estilos para item de menu ativo */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Muda o fundo ao passar o mouse */
+}
+
+/* Estilos para listas */
+ul {
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 1.2rem; /* Espaço entre os itens */
+    list-style: none; /* Remove os marcadores de lista */
+}
+
+/* Estilos para links */
+.link {
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 0.5rem; /* Preenchimento dentro do link */
+    position: relative; /* Para criar um pseudo-elemento */
+}
+
+/* Estilos para o pseudo-elemento que aparece ao passar o mouse */
+.link::before {
+    content: ''; /* Pseudo-elemento sem conteúdo */
+    position: absolute; /* Posiciona abaixo do texto */
+    width: 100%; /* Ocupa toda a largura do link */
+    height: 2px; /* Espessura da linha */
+    background-color: #fff; /* Cor da linha */
+    border-radius: 5px; /* Cantos arredondados */
+    transform: scaleX(0); /* A linha começa escondida */
+    transition: all 0.6s ease; /* Transição suave */
+}
+
+/* Estilos para a seção de comentários */
+#feedback-fields {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Estilo para campo de comentários */
+#feedback:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Lista de comentários */
+#comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usamos flexbox para disposição vertical */
+    flex-direction: column; /* Alinhamento vertical */
+    gap: 10px; /* Espaço entre os itens */
+}
+
+/* Estilo para cada item de comentário */
+#comments-list li {
+    background-color: #f1f1f1;
+    padding: 15px;
+    margin: 0; /* Sem margens */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: left; /* Alinha o texto à esquerda */
+    word-wrap: break-word; /* Quebra as palavras para não ultrapassar a largura */
+    overflow-wrap: break-word; /* Compatibilidade com navegadores antigos */
+}
+
+/* Estilo para campo de texto */
+#feedback {
+    width: 100%; /* Campo de texto ocupa 100% do espaço */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 15px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Permite redimensionamento vertical */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho do elemento */
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para botão de envio */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão de envio ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para seção de comentários */
+#comments-section {
+    margin-top: 40px;
+    max-height: 300px; /* Altura máxima */
+    overflow-y: auto; /* Permite rolar verticalmente */
+}
+
+/* Estilo para o filtro */
+.filter-container {
+    margin: 20px;
+    text-align: center;
+}
+
+/* Estilos para os campos de número e seleção */
+input[type="number"], select {
+    padding: 8px;
+    margin: 10px;
+    width: 200px;
+}
+
+/* Estilos para a seção de carros */
+.car-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+/* Estilos para o cartão de carro */
+.car-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    flex-shrink: 0; /* Impede que o cartão encolha */
+}
+
+/* Estilos para a imagem do carro */
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Estilos para a informação do carro */
+.car-info {
+    padding: 15px;
+}
+
+.car-info h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.car-info p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.car-info strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para o título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

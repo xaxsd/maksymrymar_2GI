@@ -1,0 +1,457 @@
+:root {
+    /* Variáveis principais para o tema */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --text-color: #333333; /* Cor do texto */
+    --header-bg: #333333; /* Cor de fundo para o cabeçalho */
+    --header-text: #ffffff; /* Cor do texto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+/* Temas */
+
+/* Tema escuro */
+.dark-theme {
+    --bg-color: #333333; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #1a1a1a; /* Fundo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse sobre os links */
+}
+
+/* Tema amarelo */
+.yellow-theme {
+    --bg-color: #fff176; /* Fundo amarelo */
+    --text-color: #333333; /* Texto cinza escuro */
+    --header-bg: #f6ba23; /* Fundo amarelo para o cabeçalho */
+    --header-text: #000000; /* Texto preto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+/* Tema verde */
+.green-theme {
+    --bg-color: #4CAF50; /* Fundo verde */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #388E3C; /* Fundo verde escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+/* Tema roxo */
+.purple-theme {
+    --bg-color: #9C27B0; /* Fundo roxo */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #8E24AA; /* Fundo roxo um pouco mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo ao passar o mouse sobre os links */
+}
+
+/* Estilos principais para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color); /* Define a cor de fundo baseada na variável */
+    color: var(--text-color); /* Define a cor do texto baseada na variável */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para as mudanças de fundo e cor do texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantindo uma altura mínima de 100% da tela */
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: var(--header-bg); /* Cor de fundo do cabeçalho */
+    color: var(--header-text); /* Cor do texto no cabeçalho */
+    padding: 1rem; /* Espaçamento ao redor do cabeçalho */
+    display: flex; /* Usando flexbox para alinhar os itens */
+    justify-content: space-between; /* Distribuindo os itens ao longo do eixo horizontal */
+    align-items: center; /* Centralizando os itens verticalmente */
+}
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none; /* Removendo os marcadores da lista */
+    padding: 0; /* Removendo os preenchimentos internos */
+}
+
+nav ul li {
+    display: inline; /* Exibindo os itens em linha */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Cor do texto dos links */
+    text-decoration: none; /* Removendo o sublinhado */
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 2rem; /* Espaçamento ao redor do conteúdo principal */
+}
+
+/* Estilos para seções */
+section {
+    margin-bottom: 2rem; /* Espaçamento inferior entre seções */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaçamento entre os itens dentro da seção */
+}
+
+h1, h2 {
+    color: var(--text-color); /* Cor do texto nos títulos */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: var(--header-bg); /* Cor de fundo do rodapé */
+    color: var(--header-text); /* Cor do texto do rodapé */
+    padding: 0.1rem 0; /* Espaçamento superior e inferior */
+    width: 100%; /* Largura de 100% */
+    position: relative; /* Posição relativa para controle */
+    bottom: 0; /* Alinhando o rodapé na parte inferior */
+    left: 0; /* Alinhando o rodapé à esquerda */
+    z-index: 999; /* Garantindo que o rodapé fique acima de outros elementos */
+    display: flex;
+    justify-content: center; /* Centralizando o conteúdo horizontalmente */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Alinhando os itens verticalmente */
+    align-items: center; /* Centralizando os itens horizontalmente */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Removendo os marcadores da lista */
+    padding: 0; /* Removendo os preenchimentos internos */
+    margin: 1px; /* Espaçamento superior para o menu */
+    display: flex; /* Usando flexbox para o menu horizontal */
+    gap: 0.5rem; /* Espaçamento entre os itens do menu */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Cor do texto dos links */
+    text-decoration: none; /* Removendo o sublinhado */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Cor ao passar o mouse sobre os links */
+}
+
+/* Garantindo que o rodapé ocupe toda a altura se o conteúdo for pequeno */
+body, html {
+    height: 100%; /* Definindo a altura da página para 100% da tela */
+    margin: 0; /* Removendo as margens */
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    background-color: var(--text-color); /* Cor de fundo do botão */
+    color: var(--bg-color); /* Cor do texto no botão */
+    border: none; /* Removendo a borda do botão */
+    padding: 0.5rem 1rem; /* Preenchimento interno do botão */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para o botão */
+}
+
+/* Estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Removendo os marcadores da lista */
+    padding: 0; /* Removendo o preenchimento interno */
+    margin: 0; /* Removendo as margens */
+    display: flex; /* Usando flexbox para alinhar os itens */
+}
+
+/* Estilos para cada item do menu */
+.nav-menu > li {
+    position: relative; /* Usado para menus suspensos */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+.nav-menu a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Removendo o sublinhado */
+    padding: 0.5rem 1rem; /* Preenchimento interno dos links */
+    display: block; /* Tornando o link um bloco */
+}
+
+/* Menu suspenso */
+.dropdown-menu {
+    display: none; /* Ocultando o menu por padrão */
+    position: absolute; /* Posicionando o menu abaixo do item */
+    top: 100%; /* Colocando o menu abaixo */
+    left: 0;
+    background-color: var(--header-bg); /* Cor de fundo do menu */
+    min-width: 150px; /* Largura mínima do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para o menu */
+    z-index: 1; /* Garantindo que o menu fique acima de outros itens */
+}
+
+.dropdown-menu li {
+    width: 100%; /* O menu ocupa toda a largura */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Preenchimento interno do link no menu */
+    color: var(--header-text); /* Cor do texto no menu */
+}
+
+/* Mostrando o menu suspenso ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Tornando o menu visível */
+}
+
+/* Estilos para o elemento ativo do menu */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Mudando o fundo ao passar o mouse */
+}
+
+/* Estilos para a seção de acessórios e peças */
+.accessories-and-parts {
+    padding: 30px;
+    background-color: #f7f7f7;
+}
+
+/* Estilo para o título h2 */
+h2 {
+    font-size: 2rem; /* Tamanho da fonte para o título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+/* Estilos para os filtros */
+.filters {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o formulário dentro da classe .filters */
+.filters form {
+    display: flex; /* Usando o layout flexível */
+    flex-direction: column; /* Organizando os elementos na direção vertical */
+    gap: 10px; /* Espaçamento entre os elementos do formulário */
+}
+
+/* Estilo para os rótulos (labels) dentro do formulário */
+.filters label {
+    font-size: 1rem; /* Tamanho da fonte para os rótulos */
+}
+
+/* Estilo para os campos de entrada (input) e select dentro da classe .filters */
+.filters input, .filters select {
+    padding: 8px; /* Espaçamento interno nos campos */
+    font-size: 1rem; /* Tamanho da fonte nos campos */
+    border: 1px solid #ccc; /* Borda cinza clara nos campos */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo para o botão dentro da classe .filters */
+.filters button {
+    padding: 10px; /* Espaçamento interno no botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto do botão (branco) */
+    border: none; /* Removendo a borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão quando o botão é clicado */
+}
+
+/* Estilo para o botão quando o mouse passa sobre ele */
+.filters button:hover {
+    background-color: #0056b3; /* Mudando a cor de fundo para um azul mais escuro ao passar o mouse */
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contêiner para os produtos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os produtos */
+    justify-content: space-between; /* Distribuindo os produtos ao longo da largura */
+    padding: 20px; /* Preenchimento ao redor dos produtos */
+    box-sizing: border-box; /* Incluindo os preenchimentos na largura total */
+}
+
+/* Cada produto */
+.product {
+    width: 18%; /* Largura dos produtos */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; /* Animação de transição ao passar o mouse */
+}
+
+/* Estilo para as imagens dentro da classe .product */
+.product img {
+    width: 100%; /* A imagem ocupa toda a largura disponível */
+    height: auto; /* A altura é ajustada automaticamente para manter a proporção */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 10px; /* Espaçamento inferior da imagem */
+}
+
+/* Estilo para o título h4 dentro da classe .product */
+.product h4 {
+    font-size: 1.2rem; /* Tamanho da fonte para o título do produto */
+    margin: 10px 0; /* Espaçamento acima e abaixo do título */
+}
+
+/* Estilo para a descrição do produto dentro da classe .product */
+.product p {
+    font-size: 0.9rem; /* Tamanho da fonte para a descrição */
+    margin: 10px 0; /* Espaçamento acima e abaixo da descrição */
+}
+
+/* Estilo para o preço do produto dentro da classe .product */
+.product .price {
+    font-size: 1.1rem; /* Tamanho da fonte para o preço */
+    color: #007bff; /* Cor do preço (azul) */
+    font-weight: bold; /* Deixando o preço em negrito */
+}
+
+/* Estilo para o botão "ver detalhes" dentro da classe .product */
+.product .view-details {
+    padding: 8px 12px; /* Espaçamento interno no botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto do botão (branco) */
+    border: none; /* Removendo a borda do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão quando o botão é clicado */
+}
+
+/* Estilo para o botão "ver detalhes" quando o mouse passa sobre ele */
+.product .view-details:hover {
+    background-color: #0056b3; /* Mudando a cor de fundo para um azul mais escuro ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o produto */
+.product:hover {
+    transform: translateY(-5px); /* Levanta o produto quando o mouse passa sobre ele */
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Garantindo a altura mínima para o conteúdo principal */
+main {
+    padding: 2rem;
+    flex-grow: 1; /* Faz o conteúdo ocupar todo o espaço disponível */
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

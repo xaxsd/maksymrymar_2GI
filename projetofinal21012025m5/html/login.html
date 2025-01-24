@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginForm</title>
+    <script src="../js/login.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../imagens/favicon.png" type="image/png"> <!-- Ícone do site que aparece na aba do navegador -->
+</head>
+
+<body>
+
+    <!-- Seção principal para o formulário de login -->
+    <section>
+        <div class="main">
+
+            <!-- Bordas decorativas -->
+            <span class="border"></span>
+            <span class="border"></span>
+
+            <!-- Formulário de login -->
+            <div class="form">
+
+                <!-- Додано id для форми -->
+                <form id="loginForm">
+
+                    <!-- Título do formulário -->
+                    <h2>Log In</h2>
+
+                    <!-- Campo para o nickname -->
+                    <div>
+                        <input type="text" id="nickname" required="required">
+                        <span>Nickname</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Campo para o email -->
+                    <div>
+                        <input type="text" id="email" required="required">
+                        <span>Email</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Campo para a senha -->
+                    <div>
+                        <input type="password" id="password" required="required">
+                        <span>Password</span>
+                        <i></i>
+                    </div>
+
+                    <!-- Botão de submit -->
+                    <input type="submit" value="Entrar">
+
+                </form>
+
+                <!-- Links adicionais de navegação -->
+                <ul>
+                    <li id="skipBtn">Skip</li>
+                    <li><a href="register.html">Registo</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
+

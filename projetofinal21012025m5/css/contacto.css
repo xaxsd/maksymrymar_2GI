@@ -1,0 +1,444 @@
+:root {
+    /* Variáveis principais para o tema */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --text-color: #333333; /* Cor do texto */
+    --header-bg: #333333; /* Cor de fundo para o cabeçalho */
+    --header-text: #ffffff; /* Cor do texto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Temas */
+
+/* Tema escuro */
+.dark-theme {
+    --bg-color: #333333; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #1a1a1a; /* Fundo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse sobre o link */
+}
+
+/* Tema amarelo */
+.yellow-theme {
+    --bg-color: #fff176; /* Fundo amarelo */
+    --text-color: #333333; /* Texto cinza escuro */
+    --header-bg: #f6ba23; /* Fundo amarelo para o cabeçalho */
+    --header-text: #000000; /* Texto preto para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema verde */
+.green-theme {
+    --bg-color: #4CAF50; /* Fundo verde */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #388E3C; /* Fundo verde escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema roxo */
+.purple-theme {
+    --bg-color: #9C27B0; /* Fundo roxo */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #8E24AA; /* Fundo roxo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Estilos principais para o corpo */
+body {
+    font-family: Arial, sans-serif; /* Fonte para o documento inteiro */
+    line-height: 1.6; /* Altura da linha */
+    margin: 0; /* Remover margens */
+    padding: 0; /* Remover preenchimento */
+    background-color: var(--bg-color); /* Usar variável para o fundo */
+    color: var(--text-color); /* Usar variável para a cor do texto */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: var(--header-bg); /* Cor de fundo do cabeçalho */
+    color: var(--header-text); /* Cor do texto no cabeçalho */
+    padding: 1rem; /* Preenchimento ao redor do cabeçalho */
+    display: flex; /* Usar flexbox para alinhamento dos elementos */
+    justify-content: space-between; /* Distribuir os elementos com espaço */
+    align-items: center; /* Alinhar os itens verticalmente */
+}
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none; /* Desativar marcadores de lista */
+    padding: 0; /* Remover preenchimento */
+}
+
+nav ul li {
+    display: inline; /* Criar lista horizontal */
+    margin-right: 1rem; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+/* Conteúdo principal da página */
+main {
+    padding: 2rem; /* Preenchimento ao redor do conteúdo principal */
+}
+
+/* Estilos para seções */
+section {
+    margin-bottom: 2rem; /* Espaço entre as seções */
+}
+
+h1, h2 {
+    color: var(--text-color); /* Cor do texto nos títulos */
+}
+
+/* Estilos para o rodapé (footer) */
+footer {
+    background-color: var(--header-bg); /* Cor de fundo do rodapé */
+    color: var(--header-text); /* Cor do texto no rodapé */
+    padding: 0.1rem 0; /* Margens pequenas no topo e na parte inferior */
+    width: 100%; /* Ocupa toda a largura da página */
+    position: fixed; /* Posição fixa */
+    bottom: 0; /* Fixa no fundo da página */
+    left: 0; /* Alinha à esquerda */
+    z-index: 999; /* Garante que o rodapé fique acima de outros conteúdos */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo do rodapé horizontalmente */
+}
+
+/* Conteúdo do rodapé */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Organiza os itens do rodapé verticalmente */
+    align-items: center; /* Alinha os itens horizontalmente */
+}
+
+/* Menu de navegação no rodapé */
+.footer-nav ul {
+    list-style-type: none; /* Desativa os marcadores de lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 1px; /* Espaçamento acima dos itens */
+    display: flex; /* Usa flexbox para disposição horizontal */
+    gap: 0.5rem; /* Espaço entre os itens */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 14px; /* Tamanho da fonte dos links */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Cor de fundo ao passar o mouse */
+}
+
+/* Garantir que o rodapé se estenda para a altura da página */
+body, html {
+    height: 100%; /* Altura total da página */
+    margin: 0; /* Remove as margens */
+}
+
+/* Adiciona um espaço entre o conteúdo e o rodapé */
+main {
+    padding-bottom: 1.5rem; /* Espaço para não cobrir o rodapé */
+}
+
+/* Botão para alternar temas */
+#theme-toggle {
+    background-color: var(--text-color); /* Cor de fundo do botão */
+    color: var(--bg-color); /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Preenchimento dentro do botão */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cores */
+}
+
+/* Estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Desativa os marcadores de lista */
+    padding: 0; /* Remove o preenchimento */
+    margin: 0; /* Remove margens */
+    display: flex; /* Usa flexbox para alinhamento */
+}
+
+/* Estilos para cada item no menu */
+.nav-menu > li {
+    position: relative; /* Para o menu suspenso */
+    margin-right: 1rem; /* Espaço entre os itens */
+}
+
+.nav-menu a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Sem sublinhado */
+    padding: 0.5rem 1rem; /* Preenchimento dentro do item */
+    display: block; /* Torna o link um bloco */
+}
+
+/* Menu suspenso */
+.dropdown-menu {
+    display: none; /* Esconde o menu por padrão */
+    position: absolute; /* Posiciona o menu abaixo do item */
+    top: 100%; /* Posiciona abaixo do item */
+    left: 0;
+    background-color: var(--header-bg); /* Cor de fundo do menu */
+    min-width: 150px; /* Largura mínima do menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para o menu */
+    z-index: 1; /* Garante que o menu fique acima de outros elementos */
+}
+
+.dropdown-menu li {
+    width: 100%; /* O menu ocupa toda a largura do item */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Preenchimento dentro do item */
+    color: var(--header-text); /* Cor do texto */
+}
+
+/* Mostrar menu suspenso ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostra o menu ao passar o mouse */
+}
+
+/* Estilos para item de menu ativo */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estilos para listas */
+ul {
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 1.2rem; /* Espaço entre os itens */
+    list-style: none; /* Desativa os marcadores de lista */
+}
+
+/* Estilos para links */
+.link {
+    color: #fff; /* Cor do texto do link */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 0.5rem; /* Preenchimento dentro do link */
+    position: relative; /* Para o pseudo-elemento */
+}
+
+/* Estilos para o pseudo-elemento que aparece ao passar o mouse */
+.link::before {
+    content: ''; /* Pseudo-elemento vazio */
+    position: absolute; /* Posiciona abaixo do texto */
+    width: 100%; /* Ocupa toda a largura do link */
+    height: 2px; /* Espessura da linha */
+    background-color: #fff; /* Cor da linha */
+    border-radius: 5px; /* Cantos arredondado
+     */
+    transform: scaleX(0); /* A linha começa escondida */
+    transition: all 0.6s ease; /* Transição suave */
+}
+
+/* Основные стили для формы контактов */
+.contacts {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Стиль для каждого поля ввода */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Эффект фокуса на полях ввода */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+/* Стиль для меток перед полями */
+span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Стили для группы радиокнопок (gender) */
+.gender {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Стили для кнопок отправки */
+input[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Темный синий при наведении */
+}
+
+/* Стили для радиокнопок */
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

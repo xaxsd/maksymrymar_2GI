@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <script src="../js/gallery.js" defer></script>
+    <link rel="icon" href="../imagens/favicon.png" type="image/png">
+</head>
+<body class="body light-theme">
+    <header>
+        <!-- Cabeçalho da página -->
+        <nav>
+            <ul class="nav-menu">
+                <!-- Menu de navegação -->
+                <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="gallery.html">Marcas de automóveis</a></li> <!-- Link para a galeria de marcas de carros -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link para a página de contato -->
+                <li><a href="statistics.html">Statistics</a></li> <!-- Link para a página de estatísticas -->
+                <li><a href="settings.html">Settings</a></li> <!-- Link para a página de configurações -->
+                <li class="dropdown"> 
+                    <!-- Menu suspenso -->
+                    <a href="#">Automóveis, serviços e acessórios</a> <!-- Título do menu suspenso -->
+                    <ul class="dropdown-menu"> 
+                        <!-- Itens do menu suspenso -->
+                        <li><a href="revisao.html">Revisão do automóvel</a></li> <!-- Link para a página de revisão do automóvel -->
+                        <li><a href="servico.html">Serviço e reparação de automóveis</a></li> <!-- Link para a página de serviços e reparação -->
+                        <li><a href="accessories.html">Acessórios e peças sobresselentes</a></li> <!-- Link para a página de acessórios e peças -->
+                    </ul>
+                </li> 
+                
+                <!-- User Icon with Tooltip -->
+                <li class="user-icon">
+                    <img src="../imagens/avatar.jpg" alt="User Icon" id="user-icon" class="icon">
+                    <span class="tooltip" id="user-tooltip">User Info</span>
+                </li>
+
+            </ul>
+        </nav>
+        <button id="theme-toggle">Toggle Theme</button> <!-- Botão para alternar o tema da página -->
+    </header>
+
+        <!-- Título da galeria de marcas de automóveis -->
+    <h1>Galeria de marcas de automóveis</h1>
+
+    <!-- Formulário de pesquisa -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search by brand or country...">
+        <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Contêiner da galeria -->
+    <div class="gallery" id="gallery-container">
+        <!-- As imagens serão carregadas aqui dinamicamente -->
+    </div>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025</p>
+            <nav class="footer-nav">
+                <ul>
+                    <!-- Links de navegação no rodapé -->
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="statistics.html">estatística</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

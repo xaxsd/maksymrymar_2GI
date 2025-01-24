@@ -1,0 +1,394 @@
+:root {
+    /* Definição das variáveis principais para o tema */
+    --bg-color: #ffffff; /* Cor de fundo */
+    --text-color: #333333; /* Cor do texto */
+    --header-bg: #333333; /* Cor de fundo para o cabeçalho */
+    --header-text: #ffffff; /* Cor do texto no cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Cor de fundo para links ao passar o mouse */
+}
+
+/* Temas */
+
+/* Tema escuro */
+.dark-theme {
+    --bg-color: #333333; /* Fundo escuro */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #1a1a1a; /* Fundo escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Fundo mais claro ao passar o mouse sobre o link */
+}
+
+/* Tema amarelo */
+.yellow-theme {
+    --bg-color: #fff176; /* Fundo amarelo */
+    --text-color: #333333; /* Texto cinza escuro */
+    --header-bg: #f6ba23; /* Fundo amarelo para o cabeçalho */
+    --header-text: #000000; /* Texto preto para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema verde */
+.green-theme {
+    --bg-color: #4CAF50; /* Fundo verde */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #388E3C; /* Fundo verde escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Tema roxo */
+.purple-theme {
+    --bg-color: #9C27B0; /* Fundo roxo */
+    --text-color: #ffffff; /* Texto branco */
+    --header-bg: #8E24AA; /* Fundo roxo mais escuro para o cabeçalho */
+    --header-text: #ffffff; /* Texto branco para o cabeçalho */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse sobre o link */
+}
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Definição da fonte para o corpo da página */
+    line-height: 1.6; /* Altura da linha para o texto */
+    margin: 0; /* Remover margens */
+    padding: 0; /* Remover preenchimento */
+    background-color: var(--bg-color); /* Usar a variável para a cor de fundo */
+    color: var(--text-color); /* Usar a variável para a cor do texto */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves para a mudança de cores */
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: var(--header-bg); /* Cor de fundo do cabeçalho */
+    color: var(--header-text); /* Cor do texto no cabeçalho */
+    padding: 1rem; /* Preenchimento do cabeçalho */
+    display: flex; /* Usar Flexbox para o layout */
+    justify-content: space-between; /* Espaçar os itens do cabeçalho */
+    align-items: center; /* Alinhar verticalmente os itens */
+}
+
+/* Estilos para o menu de navegação */
+nav ul {
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover preenchimento */
+}
+
+nav ul li {
+    display: inline; /* Criar lista horizontal */
+    margin-right: 1rem; /* Espaço entre os itens */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado */
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 2rem; /* Preenchimento no conteúdo principal */
+}
+
+/* Estilos para as seções */
+section {
+    margin-bottom: 2rem; /* Espaçamento entre as seções */
+}
+
+h1, h2 {
+    color: var(--text-color); /* Cor do texto nos títulos */
+}
+
+/* Estilos para o rodapé (footer) */
+footer {
+    background-color: var(--header-bg); /* Cor de fundo do rodapé */
+    color: var(--header-text); /* Cor do texto no rodapé */
+    padding: 0.1rem 0; /* Pequenos preenchimentos no rodapé */
+    width: 100%; /* Largura total */
+    position: fixed; /* Posição fixa no fundo */
+    bottom: 0; /* Alinhar ao fundo da página */
+    left: 0; /* Alinhar ao lado esquerdo */
+    z-index: 999; /* Garantir que o rodapé fique acima de outros elementos */
+    display: flex; /* Usar Flexbox */
+    justify-content: center; /* Centralizar o conteúdo */
+}
+
+/* Estilos para o conteúdo do rodapé */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Alinhar verticalmente */
+    align-items: center; /* Centralizar o conteúdo horizontalmente */
+}
+
+/* Menu de navegação no rodapé */
+.footer-nav ul {
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover preenchimento */
+    margin: 1px; /* Pequeno margem para o menu */
+    display: flex; /* Usar Flexbox */
+    gap: 0.5rem; /* Espaço entre os links */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Cor dos links */
+    text-decoration: none; /* Remover sublinhado */
+    font-size: 14px; /* Tamanho da fonte dos links */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Cor do link ao passar o mouse */
+}
+
+/* Garantir que o rodapé estique até o final da página */
+body, html {
+    height: 100%; /* Definir a altura da página para 100% */
+    margin: 0; /* Remover margens */
+}
+
+/* Preenchimento no conteúdo principal para evitar que o rodapé cubra o conteúdo */
+main {
+    padding-bottom: 1.5rem; /* Espaço para o rodapé */
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    background-color: var(--text-color); /* Cor de fundo do botão */
+    color: var(--bg-color); /* Cor do texto no botão */
+    border: none; /* Sem borda */
+    padding: 0.5rem 1rem; /* Preenchimento no botão */
+    cursor: pointer; /* Cursor em forma de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para as mudanças de cor */
+}
+
+/* Estilos para o menu de navegação */
+.nav-menu {
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover preenchimento */
+    margin: 0; /* Remover margens */
+    display: flex; /* Usar Flexbox */
+}
+
+/* Estilos para cada item do menu */
+.nav-menu > li {
+    position: relative; /* Para menus suspensos */
+    margin-right: 1rem; /* Espaço entre os itens */
+}
+
+/* Estilos para os links */
+.nav-menu a {
+    color: var(--header-text); /* Cor do texto nos links */
+    text-decoration: none; /* Sem sublinhado */
+    padding: 0.5rem 1rem; /* Preenchimento dos links */
+    display: block; /* Tornar os links blocos */
+}
+
+/* Menu suspenso */
+.dropdown-menu {
+    display: none; /* Esconder o menu por padrão */
+    position: absolute; /* Posicionar abaixo do item */
+    top: 100%; /* Colocar o menu logo abaixo */
+    left: 0;
+    background-color: var(--header-bg); /* Cor de fundo do menu */
+    min-width: 150px; /* Largura mínima */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra no menu */
+    z-index: 1; /* Manter o menu acima dos outros elementos */
+}
+
+.dropdown-menu li {
+    width: 100%; /* O menu ocupa toda a largura do item */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Preenchimento dos itens do menu */
+    color: var(--header-text); /* Cor do texto nos itens */
+}
+
+/* Mostrar o menu suspenso ao passar o mouse */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostrar menu */
+}
+
+/* Estilos para os links ao passar o mouse */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Mudar a cor do fundo ao passar o mouse */
+}
+
+/* Estilo para o título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para a lista de serviços */
+.service-container {
+    margin: 20px;
+}
+
+.service-search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-search input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.service-list {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para dicas de cuidados com o carro */
+.car-care-tips {
+    margin-top: 40px;
+}
+
+.car-care-tips h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.car-care-tips p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Inicialmente esconde as dicas extras */
+.hidden-tips {
+    display: none;
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}

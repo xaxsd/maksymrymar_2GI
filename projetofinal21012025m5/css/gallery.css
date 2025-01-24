@@ -1,0 +1,408 @@
+:root {
+    /* Основні змінні для теми */
+    --bg-color: #ffffff; /* Колір фону */
+    --text-color: #333333; /* Колір тексту */
+    --header-bg: #333333; /* Колір фону для заголовка */
+    --header-text: #ffffff; /* Колір тексту в заголовку */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Фон при наведенні на посилання */
+}
+
+/* Теми */
+
+/* Темна тема */
+.dark-theme {
+    --bg-color: #333333; /* Темний фон */
+    --text-color: #ffffff; /* Білий текст */
+    --header-bg: #1a1a1a; /* Темніший фон для заголовка */
+    --header-text: #ffffff; /* Білий текст для заголовка */
+    --link-hover-bg: rgba(255, 255, 255, 0.2); /* Світліший фон при наведенні на посилання */
+}
+
+/* Жовта тема */
+.yellow-theme {
+    --bg-color: #fff176; /* Жовтий фон */
+    --text-color: #333333; /* Текст темно-сірий */
+    --header-bg: #f6ba23; /* Жовтий фон для заголовка */
+    --header-text: #000000; /* Чорний текст для заголовка */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Фон при наведенні на посилання */
+}
+
+/* Зелена тема */
+.green-theme {
+    --bg-color: #4CAF50; /* Зелений фон */
+    --text-color: #ffffff; /* Білий текст */
+    --header-bg: #388E3C; /* Темно-зелений фон для заголовка */
+    --header-text: #ffffff; /* Білий текст для заголовка */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Фон при наведенні на посилання */
+}
+
+/* Фіолетова тема */
+.purple-theme {
+    --bg-color: #9C27B0; /* Фіолетовий фон */
+    --text-color: #ffffff; /* Білий текст */
+    --header-bg: #8E24AA; /* Трохи темніший фіолетовий фон для заголовка */
+    --header-text: #ffffff; /* Білий текст для заголовка */
+    --link-hover-bg: rgba(255, 255, 255, 0.1); /* Фон при наведенні на посилання */
+}
+
+/* Основні стилі для body */
+body {
+    font-family: Arial, sans-serif; /* Шрифт для всього документа */
+    line-height: 1.6; /* Висота рядка */
+    margin: 0; /* Заборона на відступи */
+    padding: 0; /* Заборона на відступи */
+    background-color: var(--bg-color); /* Використовуємо змінну для фону */
+    color: var(--text-color); /* Використовуємо змінну для кольору тексту */
+    transition: background-color 0.3s, color 0.3s; /* Плавний перехід для зміни кольору */
+}
+
+/* Стилі для заголовка (header) */
+header {
+    background-color: var(--header-bg); /* Фон заголовка */
+    color: var(--header-text); /* Колір тексту в заголовку */
+    padding: 1rem; /* Відступи навколо заголовка */
+    display: flex; /* Використовуємо flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Розподіляємо елементи на відстані */
+    align-items: center; /* Центруємо елементи по вертикалі */
+}
+
+/* Стилі для навігаційного меню */
+nav ul {
+    list-style-type: none; /* Відключаємо маркери списку */
+    padding: 0; /* Відключаємо відступи */
+}
+
+nav ul li {
+    display: inline; /* Створюємо горизонтальний список */
+    margin-right: 1rem; /* Відстань між елементами */
+}
+
+nav ul li a {
+    color: var(--header-text); /* Колір тексту в посиланнях */
+    text-decoration: none; /* Прибираємо підкреслення */
+}
+
+/* Основний вміст сторінки */
+main {
+    padding: 2rem; /* Відступи навколо основного вмісту */
+}
+
+/* Стилі для секцій */
+section {
+    margin-bottom: 2rem; /* Відстань між секціями */
+}
+
+h1, h2 {
+    color: var(--text-color); /* Колір тексту в заголовках */
+}
+
+/* Стилі для футера */
+footer {
+    background-color: var(--header-bg); /* Фон футера */
+    color: var(--header-text); /* Колір тексту футера */
+    padding: 0.1rem 0; /* Відступи зверху та знизу */
+    width: 100%; /* Ширина 100% */
+    position: fixed; /* Фіксована позиція */
+    bottom: 0; /* Прикріплюємо до низу */
+    left: 0; /* Вирівнювання по лівому краю */
+    z-index: 999; /* Вищий рівень, щоб футер був поверх іншого контенту */
+    display: flex;
+    justify-content: center; /* Центруємо вміст по горизонталі */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання елементів */
+    align-items: center; /* Центруємо елементи по горизонталі */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Вимикаємо маркери списку */
+    padding: 0; /* Прибираємо внутрішні відступи */
+    margin: 1px; /* Відступи зверху для меню */
+    display: flex; /* Використовуємо флекс для горизонтального меню */
+    gap: 0.5rem; /* Проміжок між елементами */
+}
+
+.footer-nav a {
+    color: var(--header-text); /* Колір посилань */
+    text-decoration: none; /* Без підкреслення */
+    font-size: 14px; /* Розмір шрифту */
+}
+
+.footer-nav a:hover {
+    color: var(--link-hover-bg); /* Колір при наведенні */
+}
+
+/* Гарантуємо, що футер розтягується на всю висоту, якщо контенту мало */
+body, html {
+    height: 100%; /* Висота сторінки на всю висоту екрану */
+    margin: 0; /* Відсутність відступів */
+}
+
+/* Головне наповнення сторінки */
+main {
+    padding-bottom: 1.5rem; /* Простір для футера */
+}
+
+/* Кнопка перемикання теми */
+#theme-toggle {
+    background-color: var(--text-color); /* Колір фону кнопки */
+    color: var(--bg-color); /* Колір тексту на кнопці */
+    border: none; /* Без обводки */
+    padding: 0.5rem 1rem; /* Відступи всередині кнопки */
+    cursor: pointer; /* Курсор у вигляді руки */
+    transition: background-color 0.3s, color 0.3s; /* Плавні зміни кольору */
+}
+
+/* Стилі для меню навігації */
+.nav-menu {
+    list-style-type: none; /* Відключаємо маркери списку */
+    padding: 0; /* Відключаємо відступи */
+    margin: 0; /* Відключаємо маржі */
+    display: flex; /* Використовуємо flexbox для вирівнювання */
+}
+
+/* Стилі для кожного елемента в меню */
+.nav-menu > li {
+    position: relative; /* Для випадаючого меню */
+    margin-right: 1rem; /* Відстань між елементами */
+}
+
+.nav-menu a {
+    color: var(--header-text); /* Колір тексту в посиланнях */
+    text-decoration: none; /* Без підкреслення */
+    padding: 0.5rem 1rem; /* Відступи всередині */
+    display: block; /* Робимо посилання блочним елементом */
+}
+
+/* Випадаюче меню */
+.dropdown-menu {
+    display: none; /* Приховуємо меню за замовчуванням */
+    position: absolute; /* Розміщуємо меню під елементом */
+    top: 100%; /* Розміщаємо меню під елементом */
+    left: 0;
+    background-color: var(--header-bg); /* Колір фону меню */
+    min-width: 150px; /* Мінімальна ширина меню */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь для меню */
+    z-index: 1; /* Забезпечуємо, що меню буде над іншими елементами */
+}
+
+.dropdown-menu li {
+    width: 100%; /* Меню займає всю ширину елемента */
+}
+
+.dropdown-menu a {
+    padding: 0.5rem 1rem; /* Відступи всередині */
+    color: var(--header-text); /* Колір тексту */
+}
+
+/* Показуємо випадаюче меню при наведенні */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Показуємо меню */
+}
+
+/* Стилі для активного елементу меню */
+.nav-menu > li > a:hover,
+.dropdown-menu a:hover {
+    background-color: var(--link-hover-bg); /* Зміна фону при наведенні */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Додайте ці стилі до styles.css */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para o formulário de pesquisa */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#search-input {
+    padding: 8px;
+    font-size: 16px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#search-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#search-btn:hover {
+    background-color: #45a049;
+}
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column; /* Alinha os itens do menu verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .nav-menu li {
+        margin-bottom: 1rem; /* Espaçamento entre os itens do menu */
+    }
+
+    .image-container {
+        flex-direction: column; /* Alinha as imagens verticalmente */
+    }
+
+    .image-container img {
+        margin: 10px 0; /* Espaçamento entre as imagens */
+    }
+
+    header {
+        flex-direction: column; /* Organiza o cabeçalho em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #theme-toggle {
+        margin-top: 10px; /* Espaçamento no topo do botão de tema */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .nav-menu {
+        flex-direction: row; /* Alinha os itens do menu na horizontal */
+    }
+
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .image-container img {
+        width: 100%; /* Imagens ocupando toda a largura */
+        max-width: 200px; /* Limita a largura máxima das imagens */
+        margin: 10px; /* Espaçamento entre as imagens */
+    }
+}
+
+/* Estilos para telas grandes (desktop) */
+@media (min-width: 1025px) {
+    .image-container {
+        display: flex;
+        justify-content: space-around; /* Espaçamento entre as imagens */
+        flex-wrap: wrap; /* Imagens se ajustam para novas linhas */
+    }
+
+    .image-container img {
+        width: 200px; /* Largura das imagens */
+        margin: 1rem; /* Espaçamento entre as imagens */
+    }
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 10px;
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon img.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px; /* Move tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.user-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
